@@ -1,12 +1,16 @@
 GradesJCE2012::Application.routes.draw do
+  resources :managers
+
   resources :teachers
 
   resources :gclasses
 
   resources :students
 
-  get "home/index"
-
+  root to: 'login#index'
+  
+  match "grades", :to => 'login'
+  match "choose_classes", :to=>'login#choose_classes'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

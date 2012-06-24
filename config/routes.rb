@@ -1,4 +1,6 @@
 GradesJCE2012::Application.routes.draw do
+  resources :subjects
+
   resources :managers
 
   resources :teachers
@@ -11,6 +13,7 @@ GradesJCE2012::Application.routes.draw do
   
   match "grades", :to => 'login'
   match "choose_classes", :to=>'login#choose_classes'
+  #match "/add_class/(/:id)", :to => 'movies#director', :as => "director"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -17,6 +17,7 @@ group :assets do
   gem 'therubyracer'
 end
 
+
 gem 'haml'
 gem 'jquery-rails'
 
@@ -33,3 +34,6 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+gem 'haml-rails'
+

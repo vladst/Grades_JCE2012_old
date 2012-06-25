@@ -1,0 +1,32 @@
+%h1 Editing teacher
+
+= form_for @teacher do |f|
+  -if @teacher.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@teacher.errors.count, "error")} prohibited this teacher from being saved:"
+      %ul
+        - @teacher.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :teacher_name 
+    = f.hidden_field :teacher_name
+    #{@teacher.teacher_name}
+  .field
+    = f.label :teacher_id
+    = f.hidden_field :teacher_id
+    #{@teacher.teacher_id}
+  .field
+    = f.label "Subject"
+    = f.select :subject, @subjects
+  .field
+    = f.label "Class"
+    = f.select :class_id, @classes   
+  .field
+    = f.label :password
+    = f.text_field :password
+  .actions
+    = f.submit 'Save'
+
+= link_to 'Show', @teacher
+\|
+= link_to 'Back', teachers_path

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Manager name:
+  = @manager.manager_name
+%p
+  %b Manager:
+  = @manager.manager_id
+%p
+  %b Password:
+  = @manager.password
+
+= link_to 'Edit', edit_manager_path(@manager)
+\|
+= link_to 'Back', managers_path

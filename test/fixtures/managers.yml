@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  manager_name: MyString
+  manager_id: 
+  password: MyString
+
+two:
+  manager_name: MyString
+  manager_id: 
+  password: MyString

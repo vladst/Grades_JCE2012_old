@@ -1,0 +1,21 @@
+%h1 Listing gclasses
+
+%table
+  %tr
+    %th Class
+    %th Student
+    %th
+    %th
+    %th
+
+  - @gclasses.each do |gclass|
+    %tr
+      %td= gclass.class_id
+      %td= gclass.student_id
+      %td= link_to 'Show', gclass
+      %td= link_to 'Edit', edit_gclass_path(gclass)
+      %td= link_to 'Destroy', gclass, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Gclass', new_gclass_path

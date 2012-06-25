@@ -1,0 +1,28 @@
+%h1 Listing teachers
+
+%table
+  %tr
+    %th Teacher name
+    %th Teacher
+    %th Subject
+    %th Class
+    %th Password
+    %th
+    %th
+    %th
+
+  - @teachers.each do |teacher|
+    %tr
+      %td= teacher.teacher_name
+      %td= teacher.teacher_id
+      %td= teacher.subject
+      %td= teacher.class_id
+      %td= teacher.password
+      %td= link_to 'Show', teacher
+      %td= link_to 'Edit', edit_teacher_path(teacher)
+      %td= link_to 'Destroy', teacher, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Add class/subject', /add_class/#{teacher}
+
+%br
+
+= link_to 'New Teacher', new_teacher_path

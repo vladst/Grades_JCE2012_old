@@ -1,0 +1,4 @@
+Gclass.create(:class_id => '6a')
+Gclass.create(:class_id => '9b')
+Gclass.create(:class_id => '7c')
+Gclass.create(:class_id => '10a')

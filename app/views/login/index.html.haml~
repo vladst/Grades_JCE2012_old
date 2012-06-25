@@ -26,4 +26,4 @@
     %p
       Forgot password? #{link_to "Click to remeber!", "#"}
       
-%%= link_to 'LOGIN', choose_classes_path
+

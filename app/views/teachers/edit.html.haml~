@@ -12,9 +12,8 @@
     = f.hidden_field :teacher_name
     #{@teacher.teacher_name}
   .field
-    = f.label :teacher_id
+    = f.label "Teacher Id" #{@teacher.teacher_id}
     = f.hidden_field :teacher_id
-     #{@teacher.teacher_id}
   .field
     = f.label "Subject"
     = f.select :subject, @subjects
